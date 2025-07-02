@@ -11,6 +11,7 @@ document.getElementById("submitBtn").addEventListener("click", ()=> {
     //.value gets text inside Id element
     const data = {
     ".cw_company": document.getElementById("name").value,
+    ".cw_companyId": document.getElementById("name").value,
     ".cw_firstName": firstLast[0],
     ".cw_lastName": firstLast[1],
     ".cw_email": document.getElementById("email").value,
@@ -22,7 +23,15 @@ document.getElementById("submitBtn").addEventListener("click", ()=> {
   };
     //save data to autofillData in chromes local storage 
     chrome.storage.local.set({autofillData: data}).then(() => {
-    console.log("Data saved");
-})
+    console.log("Data saved");  
+    })
+    
+    //reload tab 
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.reload(tabs[0].id);
+    });
+
+    
+
 })
 
