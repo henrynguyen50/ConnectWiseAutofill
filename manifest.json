@@ -1,0 +1,27 @@
+{
+    "name": "Connectwise Company Autofill",
+    "description": "Autofill company information to prevent mismatches",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "images/RTC.png"
+    },
+    "icons": {
+    "16": "images/RTC16.png",
+    "32": "images/RTC32.png",
+    "48": "images/RTC48.png",
+    "128": "images/RTC128.png"
+    },
+    
+    "content_scripts": [
+      {
+        "js": ["scripts/content.js"],
+        "matches": [
+            "https://na.myconnectwise.net/v2025_1/ConnectWise.aspx?locale=en_US#XQAACAC9AAAAAAAAAAA9iIoG07$U9XZqpLgsNhRrwxOOM5diK4om4NJDG32$jd75WT51JX3mLyQTHvR52TTJFEBZWnlIReMMqy24HSsZKxyYy$zqu65Blen7K$ljWXrFOAwWt_1J2$M2k4TRuKUbBiQPcWDanQiM6xygM_7C4KvmUF4E$wySHRjiixr$9GxyYA==??CompanyDetailNew"
+        ]
+      }  
+    ]
+    
+
+  }
