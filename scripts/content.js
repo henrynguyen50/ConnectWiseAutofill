@@ -5,7 +5,7 @@ function autofillCompany(className, info) {
     input.value = info;
     
   } else {
-    // Retry in 500ms if not found
+    // Retry in 1000ms if not found
     setTimeout(() => autofillCompany(className, info), 1000);
   }
 }
