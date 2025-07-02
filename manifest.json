@@ -3,9 +3,12 @@
     "description": "Autofill company information to prevent mismatches",
     "version": "1.0",
     "manifest_version": 3,
+    "permissions": [
+        "storage"
+    ],
     "action": {
       "default_popup": "popup.html",
-      "default_icon": "hello_extensions.png"
+      "default_icon": "ConnectWise Icon.png"
     },
     
     "content_scripts": [
