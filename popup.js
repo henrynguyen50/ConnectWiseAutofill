@@ -33,9 +33,7 @@ document.getElementById("submitBtn").addEventListener("click", ()=> {
     chrome.tabs.reload(tabs[0].id);
     });
 
-    window.location.reload();
-
-
+    
 
 })
 

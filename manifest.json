@@ -15,7 +15,7 @@
       {
         "js": ["scripts/content.js"],
         "matches": [
-            "https://na.myconnectwise.net/v2025_1/ConnectWise.aspx*"
+            "https://na.myconnectwise.net/*"
         ]
       }  
     ]

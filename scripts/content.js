@@ -6,7 +6,7 @@ function autofillCompany(className, info) {
     
   } else {
     // Retry in 500ms if not found
-    setTimeout(() => autofillCompany(className, info), 500);
+    setTimeout(() => autofillCompany(className, info), 1000);
   }
 }
 
@@ -22,6 +22,8 @@ chrome.storage.local.get("autofillData").then((result) => {
 chrome.storage.local.clear(() => {
   console.log('Autofill data cleared');
 });
+
+
 
 
 
