@@ -1,42 +1,41 @@
-<!-- popup.html -->
- <head>
-    <link rel="stylesheet"href="styles.css">
- </head>
+<!DOCTYPE html>
 <html>
-<head>
-</head>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
   <body style="background-color:#242424;">
     <div style="text-align: center;">
-    <img class="center"  src="ConnectWise Icon.png">
+      <img class="center" src="ConnectWise Icon.png">
     </div>
-    <h1 style="text-align: center;"class="CWFont">ConnectWise Autofiller</h1>
-    
-    <Span>Name</Span>
-    <input type ="name">
-    <Span>Email</Span>
-    <input type ="email">
+    <h1 style="text-align: center;" class="CWFont">ConnectWise Autofiller</h1>
 
-    <Span>Address</Span>
-    <input type ="address">
+    <span>Name</span>
+    <input type="text" id="name">
 
-    <Span>City</Span>
-    <input type ="city">
+    <span>Email</span>
+    <input type="email" id="email">
 
-    <Span>State</Span>
-    <input type ="state">
+    <span>Address</span>
+    <input type="text" id="address">
 
-    <Span>Zip Code</Span>
-    <input type ="zip">
+    <span>City</span>
+    <input type="text" id="city">
 
-    <Span>Country</Span>
-    <input type ="country">
+    <span>State</span>
+    <input type="text" id="state">
 
-    <Span>Phone</Span>
-    <input type ="phone">
+    <span>Zip Code</span>
+    <input type="text" id="zip">
 
-    <div style="text-align: center">
-        <br>
-    <button class="CWFont"type="button">Submit</button>
+    <span>Country</span>
+    <input type="text" id="country">
+
+    <span>Phone</span>
+    <input type="tel" id="phone">
+
+    <div style="text-align: center;">
+      <br>
+      <button id="submitBtn" class="CWFont" type="button">Submit</button>
     </div>
 
     <script src="popup.js"></script>
