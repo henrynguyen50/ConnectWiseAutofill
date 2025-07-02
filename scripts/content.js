@@ -18,5 +18,11 @@ chrome.storage.local.get("autofillData").then((result) => {
     }
 })
 
+//clear data after done
+chrome.storage.local.clear(() => {
+  console.log('Autofill data cleared');
+});
+
+
 
 
