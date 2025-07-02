@@ -21,6 +21,7 @@ document.getElementById("submitBtn").addEventListener("click", ()=> {
     ".cw_companyState": document.getElementById("state").value,
     ".cw_companyZipCode": document.getElementById("zip").value,
     ".cw_companyPhone": document.getElementById("phone").value,
+    ".cw_phone": document.getElementById("phone").value,
   };
     //save data to autofillData in chromes local storage 
     chrome.storage.local.set({autofillData: data}).then(() => {
