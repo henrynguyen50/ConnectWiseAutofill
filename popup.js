@@ -12,6 +12,7 @@ document.getElementById("submitBtn").addEventListener("click", ()=> {
     const data = {
     ".cw_company": document.getElementById("name").value,
     ".cw_companyId": document.getElementById("name").value,
+    ".cw_accountXref": document.getElementById("name").value,
     ".cw_firstName": firstLast[0],
     ".cw_lastName": firstLast[1],
     ".cw_email": document.getElementById("email").value,
@@ -31,7 +32,7 @@ document.getElementById("submitBtn").addEventListener("click", ()=> {
     chrome.tabs.reload(tabs[0].id);
     });
 
-    
+
 
 })
 
