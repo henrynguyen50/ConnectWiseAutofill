@@ -9,7 +9,22 @@ function autofillCompany(className, info) {
     setTimeout(() => autofillCompany(className, info), 500);
   }
 }
+//js object or hashmap
+classes = {".cw_company": "", 
+    ".cw_companyPhone": "", 
+    ".cw_companyAddress1": "", 
+    ".cw_companyCity": "", 
+    ".cw_companyState": "", 
+    ".cw_companyZipCode": "", 
+    ".cw_companyId": "", 
+    ".cw_firstName": "", 
+    ".cw_lastName": "", 
+    ".cw_email": "", 
+    ".cw_phone": ""}
 
-classes = [".cw_company", ".cw_companyPhone", ".cw_companyAdress1", ".cw_companyCity", ".cw_companyState", ".cw_companyZipCode", ".cw_companyId", ".cw_firstName", ".cw_lastName", ".cw_email", ".cw_phone"]
+//need to get input from popup
+//then set classes[key] to user input
 
-autofillCompany(".cw_company", "Henry Nguyen");
+for(const className in classes){
+    autofillCompany(className, classes[className])
+}
