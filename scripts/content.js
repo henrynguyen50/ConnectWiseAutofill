@@ -1,14 +1,22 @@
+
+
 function autofillCompany(className, info) {
   const input = document.querySelector(className);
   //validate if page has loaded then set value
+  //focus and blur simulates a user clicking in the textbox then out
+  //needed for elements that require input from a user
   if (input) {
     input.value = info;
-    
+    input.focus();
+    //input.dispatchEvent(new Event("input", { bubbles: true }));
+    //input.dispatchEvent(new Event("change", { bubbles: true }));
+    input.blur();
   } else {
     // Retry in 1000ms if not found
     setTimeout(() => autofillCompany(className, info), 1000);
   }
 }
+
 
 //need to get input from popup
 chrome.storage.local.get("autofillData").then((result) => { 

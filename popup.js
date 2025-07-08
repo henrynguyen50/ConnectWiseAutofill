@@ -10,16 +10,19 @@ document.getElementById("submitBtn").addEventListener("click", ()=> {
 
     //.value gets text inside Id element
     const data = {
-    ".cw_company": name,
-    ".cw_companyId": name,
-    ".cw_accountXref": name,
+    ".cw_company": document.getElementById("name").value,
+    ".cw_companyId": document.getElementById("name").value,
+    ".cw_accountXref": document.getElementById("name").value,
+
     ".cw_firstName": firstLast[0],
     ".cw_lastName": firstLast[1],
+
     ".cw_email": document.getElementById("email").value,
     ".cw_companyAddress1": document.getElementById("address").value,
     ".cw_companyCity": document.getElementById("city").value,
     ".cw_companyState": document.getElementById("state").value,
     ".cw_companyZipCode": document.getElementById("zip").value,
+    
     ".cw_companyPhone": document.getElementById("phone").value,
     ".cw_phone": document.getElementById("phone").value,
   };
