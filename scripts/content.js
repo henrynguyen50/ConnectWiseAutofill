@@ -4,17 +4,24 @@ function autofillCompany(className, info) {
   const input = document.querySelector(className);
   //validate if page has loaded then set value
   //focus and blur simulates a user clicking in the textbox then out
-  //needed for elements that require input from a user
+  //needed for elements that require a click in and out of field from a user
   if (input) {
-    input.value = info;
-    input.focus();
-    //input.dispatchEvent(new Event("input", { bubbles: true }));
-    //input.dispatchEvent(new Event("change", { bubbles: true }));
-    input.blur();
+      //simulate a user clicking into the textbox
+      input.focus();
+
+      //set the value and dispatch events to notify the website
+      input.value = info;
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+      input.dispatchEvent(new Event("change", { bubbles: true }));
+
+      //simulate a user clicking out of the textbox
+      input.blur();
+      
   } else {
     // Retry in 1000ms if not found
     setTimeout(() => autofillCompany(className, info), 1000);
   }
+  
 }
 
 
