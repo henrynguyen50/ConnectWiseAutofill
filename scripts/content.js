@@ -10,7 +10,22 @@ function autofillCompany(className, info, attempt = 0) {
   //focus and blur simulates a user clicking in the textbox then out
   //needed for elements that require a click in and out of field from a user
   if (input) {
-    
+      //since State is a dropdown change is not a usable event
+      // still not working on submit 
+      if(className == ".cw_companyState") {
+        input.focus();
+        input.value = info;
+        input.dispatchEvent(new Event("input", {bubbles:true}));
+
+        inputElement.dispatchEvent(new KeyboardEvent('keydown', {
+        key: 'Enter',
+        code: 'Enter',
+        keyCode: 13,
+        bubbles: true
+        }));
+        input.blur();
+
+      }
       //simulate a user clicking into the textbox
       input.focus();
 
